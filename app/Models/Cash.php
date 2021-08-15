@@ -9,6 +9,8 @@ class Cash extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'amount', 'description', 'when', 'slug'];
+
     public function user()
     {
         return $this->belongsTo(User::class);
