@@ -11,6 +11,8 @@ class Cash extends Model
 
     protected $fillable = ['name', 'amount', 'description', 'when', 'slug'];
 
+    protected $dates = ['when'];
+
     public function user()
     {
         return $this->belongsTo(User::class);

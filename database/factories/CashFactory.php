@@ -25,7 +25,7 @@ class CashFactory extends Factory
         return [
             'user_id' => rand(1, 2),
             'name' => $this->faker->word,
-            'slug' => Str::slug($this->faker->word . Str::random(6)),
+            'slug' => Str::slug($this->faker->word . '-' . Str::random(6)),
             'amount' => rand(-30000, 1000000),
             'when' => $this->faker->dateTimeBetween('-1 month', 'now'),
             'description' => $this->faker->sentence(50),
